@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+      </style>
+   </head>
+   <body>
+     <h1>Login</h1>
+    <p>
+    <label>User ID: </label>
+    <input id="uid" >
+    </p>
+    <p>
+        <label>Password: </label>
+        <input id="pwd" type="password" >
+    </p>
+    <p>
+        <input type="button" value="Login" onclick="fnLogin()">
+    </p>
+
+    <h1>
+        Result : <span id="result"></span>
+    </h1>
+    <script>
+    function fnLogin() {
+      const uidRef = document.querySelector("#uid");
+      const pwdRef = document.querySelector("#pwd");
+      const resultRef = document.querySelector("#result");
+
+      const uid = uidRef.value;
+      const pwd = pwdRef['value']
+
+      const userInfo={};
+      userInfo.userName=uid;
+      userInfo.password=pwd;
+
+      resultRef.innerText = "user name is " + userInfo.userName + " password is " + userInfo.password
+    }
+      </script>
+   </body>
+</html>
